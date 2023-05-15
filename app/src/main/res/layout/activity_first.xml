@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:padding="15dp"
     tools:context=".FirstActivity">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
     <TextView
         android:id="@+id/road"
-        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Road:"
@@ -18,20 +23,16 @@
     <EditText
         android:id="@+id/roadTextbox"
         android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_toRightOf="@+id/road"
-        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:inputType="number"/>
+</LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/roadTextbox"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="756dp"
+        android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <TextView
@@ -47,7 +48,6 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_toRightOf="@+id/start"
             android:inputType="text" />
 
         <EditText
@@ -55,18 +55,18 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_toRightOf="@+id/start"
             android:inputType="text" />
     </LinearLayout>
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
     <TextView
         android:id="@+id/link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="115dp"
-        android:layout_marginBottom="388dp"
         android:text="Link:"
         android:textSize="20sp" />
 
@@ -74,21 +74,15 @@
         android:id="@+id/linkTextbox"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginTop="118dp"
-        android:layout_marginBottom="381dp"
-        android:layout_toEndOf="@+id/link"
-        android:layout_toRightOf="@+id/link"
         android:inputType="number" />
+</LinearLayout>
 
     <LinearLayout
         android:id="@+id/endbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="637dp"
+        android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <TextView
@@ -96,7 +90,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="7dp"
             android:text="End:"
             android:textSize="20sp" />
 
@@ -116,15 +109,16 @@
             android:layout_marginStart="5dp"
             android:inputType="text" />
     </LinearLayout>
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
     <TextView
         android:id="@+id/SubLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="115dp"
-        android:layout_marginBottom="588dp"
         android:text="Sub Link:"
         android:textSize="20sp" />
 
@@ -132,41 +126,41 @@
         android:id="@+id/sublink_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="115dp"
-        android:layout_marginBottom="589dp"
-        android:layout_toEndOf="@+id/SubLink"
         android:entries="@array/sublink_options" />
-
-    <TextView
-        android:id="@+id/corridor"
-        android:layout_width="wrap_content"
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="531dp"
-        android:text="Corridor:"
-        android:textSize="20sp" />
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/corridor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Corridor:"
+            android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/corridortextbox"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="17dp"
-        android:layout_marginBottom="531dp"
-        android:layout_toRightOf="@+id/corridor"
-        android:inputType="text" />
+        <EditText
+            android:id="@+id/corridortextbox"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:inputType="text" />
+    </LinearLayout>
 
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
     <TextView
         android:id="@+id/region"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="5dp"
-        android:layout_marginBottom="482dp"
         android:text="Region:"
         android:textSize="20sp" />
 
@@ -174,20 +168,20 @@
         android:id="@+id/regiontextbox"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="482dp"
-        android:layout_toRightOf="@+id/region"
         android:inputType="text" />
+</LinearLayout>
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
     <TextView
         android:id="@+id/shoulderType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="5dp"
-        android:layout_marginBottom="437dp"
         android:text="Shoulder Type:"
         android:textSize="20sp" />
 
@@ -195,21 +189,21 @@
         android:id="@+id/shoulderTypetextbox"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginBottom="437dp"
-        android:layout_toRightOf="@+id/shoulderType"
+        android:layout_marginStart="10dp"
         android:inputType="text" />
+</LinearLayout>
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    android:gravity="center">
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="307dp"
         android:text="Submit" />
+</LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
