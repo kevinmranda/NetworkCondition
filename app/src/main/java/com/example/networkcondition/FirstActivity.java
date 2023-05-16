@@ -18,7 +18,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
 
         next = findViewById(R.id.next);
 
-        next.setOnClickListener((View.OnClickListener) next);
+        next.setOnClickListener(this::onClick);
 
     }
 

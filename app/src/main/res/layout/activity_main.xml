@@ -1,56 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/building"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:background="@color/teal_700"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="150dp"
+        android:src="@drawable/cube"/>
 
     <TextView
         android:id="@+id/loginText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="496dp"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
         android:text="Login to get started!"
         android:textSize="25sp" />
 
     <EditText
         android:id="@+id/username"
-        android:layout_width="371dp"
-        android:layout_height="43dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginBottom="394dp"
+        android:drawableLeft="@drawable/account"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:inputType="text"
+        android:ems="10"
+        android:drawablePadding="10dp"
+        android:textColorHint="@color/white"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/rectangle"
         android:hint="Username"
         android:paddingLeft="10dp"
         android:textSize="20sp" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="371dp"
-        android:layout_height="43dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginBottom="321dp"
-        android:hint="Password"
-        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
         android:paddingLeft="10dp"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:drawableStart="@drawable/lock"
+        android:drawablePadding="10dp"
+        android:hint="Password"
+        android:background="@drawable/rectangle"
+        android:drawableEnd="@drawable/eye_off"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/white"
+        android:inputType="textPassword" />
+
 
     <Button
         android:id="@+id/loginButton"
+        android:layout_width="240dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="60dp"
+        android:textSize="25dp"
+        android:background="@drawable/round"
+        android:text="Sign in"
+        android:textAllCaps="false"/>
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="214dp"
-        android:text="Login" />
-
-</RelativeLayout>
+        android:text="Forgot Password?"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white"
+            android:layout_marginHorizontal="40dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New here? Sign Up"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="122dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp" />
+    </LinearLayout>
+</LinearLayout>

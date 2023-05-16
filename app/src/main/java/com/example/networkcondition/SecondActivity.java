@@ -18,7 +18,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
         previous = findViewById(R.id.previous);
 
-        previous.setOnClickListener((View.OnClickListener) previous);
+        previous.setOnClickListener(this::onClick);
     }
 
     @Override

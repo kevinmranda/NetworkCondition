@@ -209,8 +209,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:drawableRight="@drawable/arrow_right_circle_outline"
-            android:text="Next" />
+            android:text="Next"
+            android:drawableEnd="@drawable/arrow_right_circle_outline"
+            />
     </LinearLayout>
 
 </LinearLayout>
