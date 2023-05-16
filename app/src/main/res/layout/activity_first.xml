@@ -8,25 +8,25 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     tools:context=".FirstActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:orientation="horizontal">
-    <TextView
-        android:id="@+id/road"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Road:"
-        android:textSize="20sp"
-        android:layout_marginStart="5dp"/>
-    <EditText
-        android:id="@+id/roadTextbox"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:inputType="number"/>
-</LinearLayout>
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/road"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Road:"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"/>
+        <EditText
+            android:id="@+id/roadTextbox"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:inputType="number"/>
+    </LinearLayout>
 
 
     <LinearLayout
@@ -52,31 +52,31 @@
 
         <EditText
             android:id="@+id/startTextbox2"
-            android:layout_width="150dp"
+            android:layout_width="145dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:inputType="text" />
     </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_margin="10dp"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-    <TextView
-        android:id="@+id/link"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="Link:"
-        android:textSize="20sp" />
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Link:"
+            android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/linkTextbox"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:inputType="number" />
-</LinearLayout>
+        <EditText
+            android:id="@+id/linkTextbox"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:inputType="number" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/endbox"
@@ -109,26 +109,26 @@
             android:layout_marginStart="5dp"
             android:inputType="text" />
     </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:orientation="horizontal">
-    <TextView
-        android:id="@+id/SubLink"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="Sub Link:"
-        android:textSize="20sp" />
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/SubLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Sub Link:"
+            android:textSize="20sp" />
 
-    <Spinner
-        android:id="@+id/sublink_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:entries="@array/sublink_options" />
-</LinearLayout>
+        <Spinner
+            android:id="@+id/sublink_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:entries="@array/sublink_options" />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -151,59 +151,66 @@
     </LinearLayout>
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:orientation="horizontal">
-    <TextView
-        android:id="@+id/region"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="Region:"
-        android:textSize="20sp" />
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Region:"
+            android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/regiontextbox"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:inputType="text" />
-</LinearLayout>
+        <EditText
+            android:id="@+id/regiontextbox"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:inputType="text" />
+    </LinearLayout>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:orientation="horizontal">
-    <TextView
-        android:id="@+id/shoulderType"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="Shoulder Type:"
-        android:textSize="20sp" />
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/shoulderType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Shoulder Type:"
+            android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/shoulderTypetextbox"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:inputType="text" />
-</LinearLayout>
+        <EditText
+            android:id="@+id/shoulderTypetextbox"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:inputType="text" />
+    </LinearLayout>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:orientation="horizontal"
-    android:gravity="center">
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit" />
-</LinearLayout>
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:drawableRight="@drawable/arrow_right_circle_outline"
+            android:text="Next" />
+    </LinearLayout>
 
 </LinearLayout>

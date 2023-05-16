@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent i = new Intent(this, FirstActivity.class);
             startActivity(i);
 
+            Toast.makeText(this, "Welcome, "+usernameInput+ "!", Toast.LENGTH_LONG).show();
+
             this.finish();
         } else {
             Toast.makeText(this,"Wrong username or password!",Toast.LENGTH_SHORT).show();
