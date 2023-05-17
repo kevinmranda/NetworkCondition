@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="sublink_options">
-        <item>Sub Links</item>
+    <string-array name="sublink_options1">
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
+    </string-array>
+    <string-array name="sublink_options2">
+        <item>02-11-2022:COZ/DSM/UCON/11/2022</item>
+        <item>03-11-2022:COZ/DSM/UCON/11/2022</item>
+        <item>04-11-2022:COZ/DSM/UCON/11/2022</item>
+        <item>05-11-2022:COZ/DSM/UCON/11/2022</item>
+        <item>06-11-2022:COZ/DSM/UCON/11/2022</item>
+    </string-array>
+    <string-array name="sublink_options3">
+        <item>EG Engineered gravel</item>
+        <item>CG Concrete gravel</item>
+        <item>CG Coarse gravel</item>
+        <item>MG Medium gravel</item>
+        <item>FG Fine gravel</item>
+    </string-array>
+    <string-array name="sublink_options4">
+        <item>YES</item>
+        <item>NO</item>
     </string-array>
 </resources>

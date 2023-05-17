@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".SecondActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,7 +36,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:entries="@array/sublink_options" />
+                    android:entries="@array/sublink_options2" />
             </LinearLayout>
 
             <LinearLayout
@@ -58,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:entries="@array/sublink_options" />
+                    android:entries="@array/sublink_options3" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -77,6 +76,7 @@
             <EditText
                 android:id="@+id/cariageTextbox"
                 android:layout_width="100dp"
+                android:hint="2"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="13dp"
                 android:inputType="number" />
@@ -98,6 +98,7 @@
                 android:id="@+id/rightDrainageTextbox"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:hint="2"
                 android:layout_marginStart="13dp"
                 android:inputType="number" />
         </LinearLayout>
@@ -118,6 +119,7 @@
                 android:id="@+id/cariage2Textbox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:hint="2"
                 android:layout_marginStart="13dp"
                 android:inputType="number" />
         </LinearLayout>
@@ -139,6 +141,7 @@
                 android:id="@+id/rightSpecialDrainageTextbox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:hint="0"
                 android:layout_marginStart="5dp"
                 android:inputType="number" />
         </LinearLayout>
@@ -182,6 +185,7 @@
                 android:id="@+id/overallconditionTextbox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:hint="2"
                 android:layout_marginStart="5dp"
                 android:inputType="number" />
         </LinearLayout>
@@ -202,6 +206,7 @@
                 android:id="@+id/rightSlopesTextbox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:hint="2"
                 android:layout_marginStart="5dp"
                 android:inputType="number" />
         </LinearLayout>
@@ -222,6 +227,7 @@
                 android:id="@+id/spotImprovementTextbox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:hint="0"
                 android:layout_marginStart="5dp"
                 android:inputType="number" />
         </LinearLayout>
@@ -243,6 +249,7 @@
                 android:id="@+id/leftDrainageTextbox"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:hint="2"
                 android:layout_marginStart="13dp"
                 android:inputType="number" />
         </LinearLayout>
@@ -265,7 +272,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:entries="@array/sublink_options" />
+                android:entries="@array/sublink_options4" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -286,6 +293,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
+                android:hint="2"
                 android:inputType="number" />
         </LinearLayout>
         <LinearLayout
@@ -305,6 +313,7 @@
                 android:id="@+id/leftSlopesTextbox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:hint="2"
                 android:layout_marginStart="5dp"
                 android:inputType="number" />
         </LinearLayout>
@@ -327,6 +336,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
+                android:hint="2"
                 android:inputType="number" />
         </LinearLayout>
         <LinearLayout
@@ -347,6 +357,7 @@
                 android:id="@+id/culvertNewTextbox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:hint="2"
                 android:layout_marginStart="5dp"
                 android:inputType="number" />
         </LinearLayout>
@@ -368,6 +379,7 @@
                 android:id="@+id/bridgesRepairTextbox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:hint="2"
                 android:layout_marginStart="5dp"
                 android:inputType="number" />
         </LinearLayout>
@@ -390,6 +402,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
+                android:hint="2"
                 android:inputType="number" />
         </LinearLayout>
         <LinearLayout
@@ -410,6 +423,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
+                android:hint="2"
                 android:inputType="number" />
         </LinearLayout>
         <LinearLayout
@@ -431,6 +445,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:lines="100"
+                android:hint="UP"
                 android:inputType="text" />
         </LinearLayout>
         <LinearLayout
