@@ -12,6 +12,12 @@
         android:theme="@style/Theme.NetworkCondition"
         tools:targetApi="31">
         <activity
+            android:name=".UpdateSurveyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SurveyActivity"
+            android:exported="false" />
+        <activity
             android:name=".SecondActivity"
             android:exported="false" />
         <activity
@@ -22,6 +28,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -7,4 +7,22 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="or_sign_up">New here? Sign Up</string>
     <string name="logo">logo</string>
+    <string name="road">Road:</string>
+    <string name="road_hint">20741</string>
+    <string name="start">Start:</string>
+    <string name="start_hint">KIBAMBA SHULE</string>
+    <string name="start_hint2">1276</string>
+    <string name="link">Link:</string>
+    <string name="linkhint">7500</string>
+    <string name="end">End:</string>
+    <string name="endhint">MAGOE MPIJI</string>
+    <string name="endhint2">1369</string>
+    <string name="sub_link">Sub Link:</string>
+    <string name="corridor">Corridor:</string>
+    <string name="region">Region:</string>
+    <string name="regionhint">DAR ES SALAAM</string>
+    <string name="shoulder_type">Shoulder Type:</string>
+    <string name="shoulder_type_hint">None</string>
+    <string name="submit">Submit</string>
+    <string name="next">Next</string>
 </resources>
