@@ -72,7 +72,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public ArrayList<Survey> getAllSurveys(){
-        ArrayList<Survey>surveys = new ArrayList<>();
+        ArrayList<Survey> surveys = new ArrayList<>();
 
         String query = "select * from "+TABLE_NAME+" order by id desc";
 

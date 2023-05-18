@@ -21,7 +21,7 @@
             android:textSize="20sp"
             android:layout_marginStart="5dp"/>
         <TextView
-            android:id="@+id/roadTextbox"
+            android:id="@+id/roadTextboxl"
             android:layout_width="150dp"
             android:text="@string/road_hint"
             android:textSize="15sp"
@@ -29,8 +29,6 @@
             android:layout_marginStart="5dp"
             android:inputType="number"/>
     </LinearLayout>
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,7 +44,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/startTextbox"
+            android:id="@+id/startTextboxl"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -55,7 +53,7 @@
             />
 
         <TextView
-            android:id="@+id/startTextbox2"
+            android:id="@+id/startTextbox2l"
             android:layout_width="145dp"
             android:layout_height="wrap_content"
             android:hint="@string/start_hint2"
@@ -77,7 +75,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/linkTextbox"
+            android:id="@+id/linkTextboxl"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:hint="@string/linkhint"
@@ -102,7 +100,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/endtext"
+            android:id="@+id/endtextl"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
@@ -110,7 +108,7 @@
            />
 
         <TextView
-            android:id="@+id/endtext2"
+            android:id="@+id/endtext2l"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:hint="@string/endhint2"
@@ -132,7 +130,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/sublink_spinner"
+            android:id="@+id/sublink_spinnerl"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textSize="20sp"
@@ -153,7 +151,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/corridortextbox"
+            android:id="@+id/corridortextboxl"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -177,7 +175,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/regiontextbox"
+            android:id="@+id/regiontextboxl"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:hint="@string/regionhint"
@@ -200,7 +198,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/shoulderTypetextbox"
+            android:id="@+id/shoulderTypetextboxl"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:hint="@string/shoulder_type_hint"

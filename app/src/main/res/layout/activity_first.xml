@@ -214,9 +214,15 @@
             android:id="@+id/next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:text="@string/next"
             android:drawableEnd="@drawable/arrow_right_circle_outline" />
+        <Button
+            android:id="@+id/see_survey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Survey"/>
     </LinearLayout>
 
 </LinearLayout>

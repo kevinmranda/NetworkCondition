@@ -15,7 +15,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
 
     public Spinner sub_link;
     public EditText road, start, start_no, link, end_t, end_no, corridor, region, shoulder_type;
-    public Button next,submit;
+    public Button next,submit,see_survey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +35,11 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
 
         next = findViewById(R.id.next);
         submit = findViewById(R.id.submit);
+        see_survey = findViewById(R.id.see_survey);
 
         next.setOnClickListener(this);
         submit.setOnClickListener(this);
+        see_survey.setOnClickListener(this);
 
     }
 
@@ -47,6 +49,10 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
             case  R.id.next:
                 Intent i = new Intent(this, SecondActivity.class);
                 startActivity(i);
+                this.finish();
+            case  R.id.see_survey:
+                Intent intent = new Intent(this, SurveyActivity.class);
+                startActivity(intent);
                 this.finish();
             case  R.id.submit:
                 createSurvey();
@@ -93,7 +99,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
             ));
             Toast.makeText(this, "Survey Saved!", Toast.LENGTH_SHORT).show();
 
-            Intent intent = new Intent(getApplicationContext(),SecondActivity.class);
+            Intent intent = new Intent(getApplicationContext(),SurveyActivity.class);
             startActivity(intent);
 
         }

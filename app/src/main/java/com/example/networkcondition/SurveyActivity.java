@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public class SurveyActivity extends AppCompatActivity implements View.OnClickListener, SurveyAdapter.OnClickListener {
 
-    public RecyclerView noteRecycleView;
+    public RecyclerView surveyRecycleView;
     public ArrayList<Survey> surveys = new ArrayList<>();
 
     @Override
@@ -29,7 +29,7 @@ public class SurveyActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_survey);
 
-        noteRecycleView = findViewById(id.surveyRecycleView);
+        surveyRecycleView = findViewById(id.surveyRecycleView);
 
         getSurveys();
 
@@ -37,9 +37,9 @@ public class SurveyActivity extends AppCompatActivity implements View.OnClickLis
 
         adapter.setOnClickListener(this);
 
-        noteRecycleView.setHasFixedSize(true);
-        noteRecycleView.setLayoutManager(new StaggeredGridLayoutManager(1, LinearLayoutManager.VERTICAL));
-        noteRecycleView.setAdapter(adapter);
+        surveyRecycleView.setHasFixedSize(true);
+        surveyRecycleView.setLayoutManager(new StaggeredGridLayoutManager(1, LinearLayoutManager.VERTICAL));
+        surveyRecycleView.setAdapter(adapter);
 
     }
 

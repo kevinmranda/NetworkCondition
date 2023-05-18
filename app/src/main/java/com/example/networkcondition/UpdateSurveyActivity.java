@@ -16,7 +16,6 @@ import com.example.networkcondition.model.Survey;
 import com.example.networkcondition.repository.DatabaseHelper;
 
 public class UpdateSurveyActivity extends AppCompatActivity implements View.OnClickListener{
-
     public Spinner sub_link;
     public EditText road, start, start_no, link, end_t, end_no, corridor, region, shoulder_type;
     public Button previous,update;

@@ -34,7 +34,8 @@ public class SurveyAdapter extends RecyclerView.Adapter<SurveyViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SurveyViewHolder holder, @SuppressLint("RecyclerView") int position) {
+    public void onBindViewHolder(@NonNull SurveyViewHolder holder, int position) {
+
         Survey survey = surveys.get(position);
         holder.road.setText(surveys.get(position).getRoad());
         holder.start.setText(surveys.get(position).getStart());
