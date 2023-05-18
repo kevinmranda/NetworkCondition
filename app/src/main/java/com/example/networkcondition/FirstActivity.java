@@ -49,11 +49,9 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
             case  R.id.next:
                 Intent i = new Intent(this, SecondActivity.class);
                 startActivity(i);
-                this.finish();
             case  R.id.see_survey:
                 Intent intent = new Intent(this, SurveyActivity.class);
                 startActivity(intent);
-                this.finish();
             case  R.id.submit:
                 createSurvey();
         }

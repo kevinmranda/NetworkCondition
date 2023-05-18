@@ -36,9 +36,8 @@ public class SurveyActivity extends AppCompatActivity implements View.OnClickLis
         SurveyAdapter adapter = new SurveyAdapter(this, surveys);
 
         adapter.setOnClickListener(this);
-
         surveyRecycleView.setHasFixedSize(true);
-        surveyRecycleView.setLayoutManager(new StaggeredGridLayoutManager(1, LinearLayoutManager.VERTICAL));
+        surveyRecycleView.setLayoutManager(new LinearLayoutManager(this));
         surveyRecycleView.setAdapter(adapter);
 
     }
@@ -71,5 +70,6 @@ public class SurveyActivity extends AppCompatActivity implements View.OnClickLis
     private void getSurveys() {
         DatabaseHelper db = new DatabaseHelper(getApplicationContext());
         surveys = db.getAllSurveys();
+        Toast.makeText(this, "DATA: "+surveys.size(), Toast.LENGTH_SHORT).show();
     }
 }

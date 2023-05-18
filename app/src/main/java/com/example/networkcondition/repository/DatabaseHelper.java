@@ -36,7 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String query = "create table "+TABLE_NAME+" ( "+KEY_ID+" integer primary key,"+KEY_ROAD+"" +
                 " text,"+KEY_START+" text,"+KEY_START_NO+" " +
-                "text,"+KEY_LINK+" text,"+KEY_END+"text,"+KEY_END_NO+" text,"+KEY_SUB_LINK+"" +
+                "text,"+KEY_LINK+" text,"+KEY_END+" text,"+KEY_END_NO+" text,"+KEY_SUB_LINK+"" +
                 " text,"+KEY_CORRIDOR+" text,"+KEY_REGION+" text,"+KEY_SHOULDER_TYPE+" text)";
         db.execSQL(query);
     }
@@ -77,6 +77,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor =db.rawQuery(query, null);
 
+        System.out.println("DATA: "+cursor.moveToFirst());
         if (cursor.moveToFirst()){
             do{
                 Survey survey =new Survey();
@@ -91,6 +92,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 survey.setCorridor(cursor.getString(8));
                 survey.setRegion(cursor.getString(9));
                 survey.setShoulder_type(cursor.getString(10));
+                surveys.add(survey);
             } while (cursor.moveToNext());
         }
         return surveys;

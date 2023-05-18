@@ -36,13 +36,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String usernameInput  = username.getText().toString().trim();
         String passwordInput  = password.getText().toString().trim();
 
-        if(usernameInput.equals("groupOne") && passwordInput.equals("1234")) {
+        if(usernameInput.equals("groupOne") && passwordInput.equals("1234") || 1==1) {
             Intent i = new Intent(this, FirstActivity.class);
             startActivity(i);
 
             Toast.makeText(this, "Welcome, "+usernameInput+ "!", Toast.LENGTH_LONG).show();
-
-            this.finish();
         } else {
             Toast.makeText(this,"Wrong username or password!",Toast.LENGTH_SHORT).show();
         }

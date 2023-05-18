@@ -22,7 +22,7 @@
         android:id="@+id/loginText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:textColor="@color/white"
         android:text="@string/login_text"
         android:textSize="25sp" />
@@ -37,6 +37,7 @@
         android:inputType="text"
         android:ems="10"
         android:drawablePadding="10dp"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:layout_marginHorizontal="30dp"
         android:background="@drawable/rectangle"
@@ -53,6 +54,7 @@
         android:paddingStart="10dp"
         android:textSize="20sp"
         android:drawableStart="@drawable/lock"
+        android:textColor="@color/white"
         android:autofillHints="password"
         android:drawablePadding="10dp"
         android:hint="@string/passwordHint"
@@ -99,7 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="120dp"
             android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="30dp"
             android:text="@string/or_sign_up"
             android:textColor="@color/white"
             android:textSize="20sp" />

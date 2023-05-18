@@ -74,7 +74,6 @@ public class UpdateSurveyActivity extends AppCompatActivity implements View.OnCl
             case  R.id.previous:
                 Intent i = new Intent(this, SurveyActivity.class);
                 startActivity(i);
-                this.finish();
             case  R.id.update:
                 updateSurvey();
             case  R.id.delete:
