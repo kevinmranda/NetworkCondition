@@ -19,7 +19,7 @@ import com.example.networkcondition.repository.DatabaseHelper;
 
 import java.util.ArrayList;
 
-public class SurveyActivity extends AppCompatActivity implements View.OnClickListener, SurveyAdapter.OnClickListener {
+public class SurveyActivity extends AppCompatActivity implements SurveyAdapter.OnClickListener {
 
     public RecyclerView surveyRecycleView;
     public ArrayList<Survey> surveys = new ArrayList<>();
@@ -37,19 +37,15 @@ public class SurveyActivity extends AppCompatActivity implements View.OnClickLis
 
         adapter.setOnClickListener(this);
         surveyRecycleView.setHasFixedSize(true);
-        surveyRecycleView.setLayoutManager(new LinearLayoutManager(this));
+        surveyRecycleView.setLayoutManager(new StaggeredGridLayoutManager(2,LinearLayoutManager.VERTICAL));
         surveyRecycleView.setAdapter(adapter);
 
     }
 
-    @Override
-    public void onClick(View v) {
-
-    }
 
     @Override
     public void onClick(int position, Survey survey) {
-        Toast.makeText(this, "Position: "+position+" id: "+survey.getId(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Position: " + position + " id: " + survey.getId(), Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(this, UpdateSurveyActivity.class);
         intent.putExtra("id",survey.getId());
@@ -63,7 +59,6 @@ public class SurveyActivity extends AppCompatActivity implements View.OnClickLis
         intent.putExtra("corridor",survey.getCorridor());
         intent.putExtra("region",survey.getRegion());
         intent.putExtra("shoulder_type",survey.getShoulder_type());
-
         startActivity(intent);
     }
 

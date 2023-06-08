@@ -2,6 +2,7 @@ package com.example.networkcondition;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,14 +12,13 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.networkcondition.R;
-import com.example.networkcondition.SurveyActivity;
 import com.example.networkcondition.model.Survey;
 import com.example.networkcondition.repository.DatabaseHelper;
 
-public class UpdateSurveyActivity extends AppCompatActivity implements View.OnClickListener{
-    public Spinner sub_link;
-    public EditText road, start, start_no, link, end_t, end_no, corridor, region, shoulder_type;
-    public Button previous,update;
+public class UpdateSurveyActivity extends AppCompatActivity implements View.OnClickListener {
+
+    public EditText road, start, start_no, link, end_t, end_no, corridor, region, shoulder_type, sub_link;
+    public Button previous, update, delete;
 
     public int surveyId;
 
@@ -36,11 +36,12 @@ public class UpdateSurveyActivity extends AppCompatActivity implements View.OnCl
         corridor = findViewById(R.id.corridortextbox);
         region = findViewById(R.id.regiontextbox);
         shoulder_type = findViewById(R.id.shoulderTypetextbox);
-        sub_link = findViewById(R.id.sublink_spinner);
-        previous = findViewById(R.id.previous);
+        sub_link = findViewById(R.id.sublink);
+        previous = findViewById(R.id.previousUpdate);
         update = findViewById(R.id.update);
+        delete = findViewById(R.id.delete);
 
-        surveyId =getIntent().getIntExtra("id", 0);
+        surveyId = getIntent().getIntExtra("id", 0);
         String roadExtra = getIntent().getStringExtra("road");
         String startExtra = getIntent().getStringExtra("start");
         String start_noExtra = getIntent().getStringExtra("start_no");
@@ -58,26 +59,77 @@ public class UpdateSurveyActivity extends AppCompatActivity implements View.OnCl
         link.setText(linkExtra);
         end_t.setText(endExtra);
         end_no.setText(end_noExtra);
-        //sub_link.setText(sub_linkExtra);
+        sub_link.setText(sub_linkExtra);
         corridor.setText(corridorExtra);
         region.setText(regionExtra);
         shoulder_type.setText(shoulder_typeExtra);
 
         previous.setOnClickListener(this);
         update.setOnClickListener(this);
-
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case  R.id.previous:
+            case R.id.previousUpdate:
                 Intent i = new Intent(this, SurveyActivity.class);
                 startActivity(i);
-            case  R.id.update:
+                break;
+
+            case R.id.update:
                 updateSurvey();
-            case  R.id.delete:
+                break;
+
+            case R.id.delete:
                 deleteSurvey();
+                break;
+        }
+    }
+
+    private void updateSurvey() {
+        String roadText = road.getText().toString();
+        String startText = start.getText().toString();
+        String start_noText = start_no.getText().toString();
+        String linkText = link.getText().toString();
+        String endText = end_t.getText().toString();
+        String end_noText = end_no.getText().toString();
+        String sublinkText = sub_link.getText().toString();
+        String corridorText = corridor.getText().toString();
+        String regionText = region.getText().toString();
+        String shoulder_typeText = shoulder_type.getText().toString();
+
+        if (!roadText.isEmpty() &&
+                !startText.isEmpty() &&
+                !start_noText.isEmpty() &&
+                !linkText.isEmpty() &&
+                !endText.isEmpty() &&
+                !end_noText.isEmpty() &&
+                !sublinkText.isEmpty() &&
+                !corridorText.isEmpty() &&
+                !regionText.isEmpty() &&
+                !shoulder_typeText.isEmpty()) {
+
+            DatabaseHelper db = new DatabaseHelper(getApplicationContext());
+
+            db.updateSurvey(new Survey(
+                    surveyId,
+                    roadText,
+                    startText,
+                    start_noText,
+                    linkText,
+                    endText,
+                    end_noText,
+                    sublinkText,
+                    corridorText,
+                    regionText,
+                    shoulder_typeText
+            ));
+            Toast.makeText(this, "Survey updated", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(getApplicationContext(), SurveyActivity.class);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -88,7 +140,7 @@ public class UpdateSurveyActivity extends AppCompatActivity implements View.OnCl
         String linkText = link.getText().toString();
         String endText = end_t.getText().toString();
         String end_noText = end_no.getText().toString();
-        String sublinkText = sub_link.toString();
+        String sublinkText = sub_link.getText().toString();
         String corridorText = corridor.getText().toString();
         String regionText = region.getText().toString();
         String shoulder_typeText = shoulder_type.getText().toString();
@@ -110,51 +162,7 @@ public class UpdateSurveyActivity extends AppCompatActivity implements View.OnCl
         ));
         Toast.makeText(this, "Survey Deleted", Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(getApplicationContext(),SurveyActivity.class);
+        Intent intent = new Intent(getApplicationContext(), SurveyActivity.class);
         startActivity(intent);
-    }
-
-    private void updateSurvey() {
-        String roadText = road.getText().toString();
-        String startText = start.getText().toString();
-        String start_noText = start_no.getText().toString();
-        String linkText = link.getText().toString();
-        String endText = end_t.getText().toString();
-        String end_noText = end_no.getText().toString();
-        String sublinkText = sub_link.toString();
-        String corridorText = corridor.getText().toString();
-        String regionText = region.getText().toString();
-        String shoulder_typeText = shoulder_type.getText().toString();
-
-        if (!roadText.equals("") &&
-                !startText.equals("") &&
-                !start_noText.equals("") &&
-                !linkText.equals("") &&
-                !endText.equals("") &&
-                !end_noText.equals("")&&
-                !sublinkText.equals("") &&
-                !corridorText.equals("") &&
-                !regionText.equals("")&&
-                !shoulder_typeText.equals("")){
-
-            DatabaseHelper db = new DatabaseHelper(getApplicationContext());
-
-            db.updateSurvey(new Survey(
-                    roadText,
-                    startText,
-                    start_noText,
-                    linkText,
-                    endText,
-                    end_noText,
-                    sublinkText,
-                    corridorText,
-                    regionText,
-                    shoulder_typeText
-            ));
-            Toast.makeText(this, "Survey updated", Toast.LENGTH_SHORT).show();
-
-            Intent intent = new Intent(getApplicationContext(),SurveyActivity.class);
-            startActivity(intent);
-        }
     }
 }

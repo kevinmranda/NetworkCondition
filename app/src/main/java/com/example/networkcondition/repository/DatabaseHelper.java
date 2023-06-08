@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.networkcondition.model.Survey;
-import com.google.android.material.tabs.TabLayout;
+//import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 

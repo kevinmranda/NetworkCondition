@@ -455,7 +455,7 @@
             android:gravity="center"
             android:orientation="horizontal">
             <Button
-                android:id="@+id/previous"
+                android:id="@+id/previousSec"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/arrow_left_circle_outline"

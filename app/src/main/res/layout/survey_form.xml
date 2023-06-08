@@ -125,8 +125,8 @@
             android:text="@string/sub_link"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/sublink_spinner"
+        <EditText
+            android:id="@+id/sublink"
             android:layout_height="match_parent"
             android:hint="@string/endhint2"
             android:inputType="number"

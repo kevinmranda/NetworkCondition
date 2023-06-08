@@ -1,6 +1,8 @@
 package com.example.networkcondition;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -33,7 +35,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         shoulder_type = findViewById(R.id.shoulderTypetextbox);
         sub_link = findViewById(R.id.sublink_spinner);
 
-        next = findViewById(R.id.next);
+        next = findViewById(R.id.nextFirst);
         submit = findViewById(R.id.submit);
         see_survey = findViewById(R.id.see_survey);
 
@@ -46,7 +48,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case  R.id.next:
+            case  R.id.nextFirst:
                 Intent i = new Intent(this, SecondActivity.class);
                 startActivity(i);
             case  R.id.see_survey:

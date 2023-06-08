@@ -2,6 +2,7 @@ package com.example.networkcondition;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,12 +12,13 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
     public Button previous;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        previous = findViewById(R.id.previous);
+        previous = findViewById(R.id.previousSec);
 
         previous.setOnClickListener(this::onClick);
     }
