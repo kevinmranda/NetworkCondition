@@ -1,7 +1,5 @@
 package com.example.networkcondition;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +15,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
 
     public Spinner sub_link;
     public EditText road, start, start_no, link, end_t, end_no, corridor, region, shoulder_type;
-    public Button next,submit,see_survey;
+    public Button next, submit, see_survey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +40,6 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         next.setOnClickListener(this);
         submit.setOnClickListener(this);
         see_survey.setOnClickListener(this);
-
     }
 
     @Override
@@ -51,23 +48,25 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
             case  R.id.nextFirst:
                 Intent i = new Intent(this, SecondActivity.class);
                 startActivity(i);
+                break;
             case  R.id.see_survey:
                 Intent intent = new Intent(this, SurveyActivity.class);
                 startActivity(intent);
+                break;
             case  R.id.submit:
                 createSurvey();
+                break;
         }
     }
 
     public void createSurvey(){
-
         String roadText = road.getText().toString();
         String startText = start.getText().toString();
         String start_noText = start_no.getText().toString();
         String linkText = link.getText().toString();
         String endText = end_t.getText().toString();
         String end_noText = end_no.getText().toString();
-        String sublinkText = sub_link.toString();
+        String sublinkText = sub_link.getSelectedItem().toString();
         String corridorText = corridor.getText().toString();
         String regionText = region.getText().toString();
         String shoulder_typeText = shoulder_type.getText().toString();
@@ -77,31 +76,30 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                 !start_noText.equals("") &&
                 !linkText.equals("") &&
                 !endText.equals("") &&
-                !end_noText.equals("")&&
+                !end_noText.equals("") &&
                 !sublinkText.equals("") &&
                 !corridorText.equals("") &&
-                !regionText.equals("")&&
-                !shoulder_typeText.equals("")){
+                !regionText.equals("") &&
+                !shoulder_typeText.equals("")) {
 
             DatabaseHelper db = new DatabaseHelper(getApplicationContext());
 
             db.createSurvey(new Survey(
-                                roadText,
-                                startText,
-                                start_noText,
-                                linkText,
-                                endText,
-                                end_noText,
-                                sublinkText,
-                                corridorText,
-                                regionText,
-                                shoulder_typeText
+                    roadText,
+                    startText,
+                    start_noText,
+                    linkText,
+                    endText,
+                    end_noText,
+                    sublinkText,
+                    corridorText,
+                    regionText,
+                    shoulder_typeText
             ));
             Toast.makeText(this, "Survey Saved!", Toast.LENGTH_SHORT).show();
 
-            Intent intent = new Intent(getApplicationContext(),SurveyActivity.class);
+            Intent intent = new Intent(getApplicationContext(), SurveyActivity.class);
             startActivity(intent);
-
         }
     }
 }

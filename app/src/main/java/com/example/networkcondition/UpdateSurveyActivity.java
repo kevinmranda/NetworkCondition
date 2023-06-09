@@ -1,17 +1,14 @@
 package com.example.networkcondition;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.networkcondition.R;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.networkcondition.model.Survey;
 import com.example.networkcondition.repository.DatabaseHelper;
 
@@ -66,6 +63,7 @@ public class UpdateSurveyActivity extends AppCompatActivity implements View.OnCl
 
         previous.setOnClickListener(this);
         update.setOnClickListener(this);
+        delete.setOnClickListener(this);
     }
 
     @Override
@@ -134,31 +132,21 @@ public class UpdateSurveyActivity extends AppCompatActivity implements View.OnCl
     }
 
     private void deleteSurvey() {
-        String roadText = road.getText().toString();
-        String startText = start.getText().toString();
-        String start_noText = start_no.getText().toString();
-        String linkText = link.getText().toString();
-        String endText = end_t.getText().toString();
-        String end_noText = end_no.getText().toString();
-        String sublinkText = sub_link.getText().toString();
-        String corridorText = corridor.getText().toString();
-        String regionText = region.getText().toString();
-        String shoulder_typeText = shoulder_type.getText().toString();
 
         DatabaseHelper db = new DatabaseHelper(getApplicationContext());
 
         db.deleteSurvey(new Survey(
                 surveyId,
-                roadText,
-                startText,
-                start_noText,
-                linkText,
-                endText,
-                end_noText,
-                sublinkText,
-                corridorText,
-                regionText,
-                shoulder_typeText
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
         ));
         Toast.makeText(this, "Survey Deleted", Toast.LENGTH_SHORT).show();
 
